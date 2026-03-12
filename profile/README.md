@@ -46,3 +46,32 @@
 ```bash
 git clone [메인_레포지토리_주소]
 cd [메인_레포지토리_폴더명]
+```
+
+### Step 2. 서브모듈 추가
+우리 팀이 사용할 폴더 위치(예: app/frontend)에 방금 만든 Organization 내 레포지토리를 서브모듈로 추가합니다.
+
+```bash
+git submodule add [생성한_우리팀_레포지토리_URL] [경로/폴더명]
+
+# 예시:
+# git submodule add [https://github.com/swcamp-22th-projects/team1-frontend.git](https://github.com/swcamp-22th-projects/team1-frontend.git) app/frontend
+```
+
+### Step 3. 🚨 [중요] 브랜치 체크아웃
+서브모듈은 처음 추가 시 특정 브랜치가 아닌 Detached HEAD 상태로 연결됩니다. 코드 작업을 시작하기 전에 반드시 서브모듈 폴더로 이동하여 main 브랜치로 체크아웃 하세요.
+
+```bash
+cd [서브모듈_경로]   # 예: cd app/frontend
+git checkout main
+```
+
+### Step 4. 메인 레포지토리에 변경사항 반영
+다시 메인 레포지토리의 최상위 경로로 돌아와서 서브모듈 연결 내역을 커밋하고 푸시합니다.
+
+```bash
+cd ..
+git add .
+git commit -m "feat: Team X 서브모듈 연결"
+git push origin main
+```
