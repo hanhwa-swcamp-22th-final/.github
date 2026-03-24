@@ -55,7 +55,7 @@ cd [메인_레포지토리_폴더명]
 git submodule add [생성한_우리팀_레포지토리_URL] [경로/폴더명]
 
 # 예시:
-# git submodule add [https://github.com/swcamp-22th-projects/team1-frontend.git](https://github.com/swcamp-22th-projects/team1-frontend.git) app/frontend
+# git submodule add https://github.com/swcamp-22th-projects/team1-frontend.git app/frontend
 ```
 
 ### Step 3. 🚨 [중요] 브랜치 체크아웃
